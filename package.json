@@ -1,0 +1,35 @@
+{
+  "name": "react-app",
+  "version": "1.0.0",
+  "description": "Shoppinglist in react",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client-install": "npm install --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peter-keller/shoppinglist-react.git"
+  },
+  "author": "Peter Keller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peter-keller/shoppinglist-react/issues"
+  },
+  "homepage": "https://github.com/peter-keller/shoppinglist-react#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^3.6.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.6",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.3"
+  }
+}
